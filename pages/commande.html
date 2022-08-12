@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Food</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../utilitaires/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <script src="../utilitaires/jquery-3.6.0.min.js"></script>
+    <script src="../utilitaires/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="../js/connexion.js"></script>
+    <script src="../js/membres.js"></script>
+    <script src="../js/restaurants.js"></script>
+    <script src="../js/scripts.js"></script> 
+</head>
+<body class="bgachats" onLoad="initialiser();">
+    <!-- Barre de navigation-->
+    <nav class="navbar navbar-expand-lg bgnavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../images/logo.png" class="imglogo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <h1 class="optH1">Restaurant Food</h1>
+                        <span class="optnavbar">Tel : 514-415-5415</span>
+                        <span class="optnavbar">Email : commande@retraurantfood.ca</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div onClick="retour();" class="optmembre">
+            <span>Déconnecter</span>
+        </div>
+    </nav>
+    <!-- Fin barre de navigation-->
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="card col-md-4" >
+                <img id="imgEntree" src="" class="card-img-top" alt="entree">
+                <div class="card-body">
+                    <h5 id="nomEntree" class="card-title"></h5>
+                    <h5 id="prixEntree"></h5>
+                    <!-- <p id="infosLivre" class="card-text"></p>-->
+                    <label for="selEntrees" class="form-label">Choix de l'entree</label>
+                    <select id="selEntrees" onChange="traiterEntree();" class="form-select" aria-label="Default select example">
+                    </select>
+                </div>
+            </div>
+            
+            <div class="col-lg-2"></div>
+            <div class="card col-md-4">
+                <img id="imgRepas" src="" class="card-img-top" alt="repas">
+                <div class="card-body">
+                    <h5 id="nomRepas" class="card-title"></h5>
+                    <h5 id="prixRepas"></h5>
+                    <!-- <p id="infosPap" class="card-text"></p>-->
+                    <label for="selRepas" class="form-label">Choix du repas</label>
+                    <select id="selRepas" onChange="traiterRepas();" class="form-select" aria-label="Default select example">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facture -->
+    <br /><br />
+    
+    <div  class="bgnavbar alert alert-primary d-flex align-items-center " role="alert">
+        <div id="facture"><span class="idf ">FACTURE</span></div>
+    </div>
+    
+    <!-- Fin facture -->
+</body>
+</html>
