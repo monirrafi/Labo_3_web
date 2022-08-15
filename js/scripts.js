@@ -5,5 +5,6 @@ let basculerVisibilteModal = (idModal, etatFR) => {
   }
   let retour = () => {
     window.open("../index.html");
+    window.close();
  }
  

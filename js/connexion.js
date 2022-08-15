@@ -15,6 +15,7 @@ let seConnecter = () => {
                 document.getElementById('formConnexion').reset(); //Vider le formulaire
                 basculerVisibilteModal('modalConnexion','cacher'); //Cacher le modal de id modalConnexion
                 window.open('pages/commande.html');//rediriger vers la page membre.html
+                window.close();
             } else {
                 msgErr="Impossible de vous connecter. Contactez l'administrateur.";
                 break;
